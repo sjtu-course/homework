@@ -1,3 +1,15 @@
-# homework
+# 字节跳动x上海交大 秋季课程作业
 
-To merge your code to master branch, you need do the followings:
+## 提交方法
+1.发送你的github账号到助教邮箱
+2.你的github账号会收到sjtu-course的加入邀请
+3.同意该邀请
+4.git clone该仓库
+5.建一个你自己的的文件夹（用英文名）
+6.在你自己的文件夹中提交你的作业代码和信息
+7.push到master分支
+
+## 注意事项
+1.仅在自己的文件夹中提交自己的内容，不要修改其它人的
+2.不要提交中间的编译产品，只提交代码
+3.可以附上比较详细的内容说明，讲师们会详细审阅
