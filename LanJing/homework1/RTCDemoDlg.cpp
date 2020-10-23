@@ -104,16 +104,18 @@ BOOL CRTCDemoDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
+	// Find path
 	CString strExePath;
 	CString strPath;
 	GetModuleFileName(NULL, strExePath.GetBufferSetLength(MAX_PATH + 1), MAX_PATH + 1);
 	int nPos = strExePath.ReverseFind(_T('\\'));
 	strPath = strExePath.Left(nPos + 1);
-	//AfxMessageBox(strPath);
 	strPath += "info.ini";
-	CString  room_name, user_name;	
+	CString  room_name, user_name;
+	// Read .ini
 	GetPrivateProfileString(L"info", L"room", L"", room_name.GetBuffer(MAX_PATH), MAX_PATH, strPath);
 	GetPrivateProfileString(L"info", L"user", L"", user_name.GetBuffer(MAX_PATH), MAX_PATH, strPath);
+	// Set text
 	m_room.SetWindowText(room_name);
 	m_name.SetWindowText(user_name);
 
@@ -177,13 +179,14 @@ void CRTCDemoDlg::OnBnClickedLogin()
 	m_name.GetWindowText(user_name);
 	m_room.GetWindowText(room_name);
 
+	// Find path
 	CString strExePath;
 	CString strPath;
 	GetModuleFileName(NULL, strExePath.GetBufferSetLength(MAX_PATH + 1), MAX_PATH + 1);	
 	int nPos = strExePath.ReverseFind(_T('\\'));
 	strPath = strExePath.Left(nPos + 1);
-	//AfxMessageBox(strPath);
 	strPath += "info.ini";
+	// Save .ini
 	WritePrivateProfileString(L"info", L"room", room_name, strPath);
 	WritePrivateProfileString(L"info", L"user", user_name, strPath);
 	
