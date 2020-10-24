@@ -43,8 +43,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = getIntent();
         uid = intent.getStringExtra("uid");
         rid = intent.getStringExtra("rid");
-        getSupportActionBar().setTitle(rid);
-
+        getSupportActionBar().setTitle("Room: " + rid);
     }
 
     void initView(){
