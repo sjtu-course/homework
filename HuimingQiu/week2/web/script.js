@@ -20,11 +20,11 @@ const isValidString = (s) => {
   return /[_a-zA-Z0-9]+/.test(s);
 };
 
-roomIdInput.addEventListener("change", (e) => {
+roomIdInput.addEventListener("input", (e) => {
   roomId = e.target.value;
   changeButton();
 });
-userIdInput.addEventListener("change", (e) => {
+userIdInput.addEventListener("input", (e) => {
   userId = e.target.value;
   changeButton();
 });
