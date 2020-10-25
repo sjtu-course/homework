@@ -24,13 +24,22 @@ public class LoginActivity extends AppCompatActivity {
         mEtRoomID = findViewById(R.id.et_room_id);
         mEtUserName = findViewById(R.id.et_user_name);
         mBtnJoin = findViewById(R.id.btn_join);
-        // 3. 监听按钮点击
+
+        SharedPreference sharedPreference = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        strusername = sharedPreference.getString("username","");
+        strroomid = sharedPreference.getString("roomid","");
+        mEtUserName.setText(strusername);
+        mEtRoomID.setText(strroomid)
+
+      // 3. 监听按钮点击
         mBtnJoin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // 4. 获取用户的输入
                 String roomId = mEtRoomID.getText().toString();
                 String userName = mEtRoomID.getText().toString();
+                Editor editor = sharedPreference.edit();
+                editor.putString("username", userName);
                 // 5. 创建Intent对象
                 Intent intent = new Intent(LoginActivity.this, ChatActivity.class);
                 intent.putExtra("rid", roomId);

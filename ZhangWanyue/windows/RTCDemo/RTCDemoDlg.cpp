@@ -105,6 +105,12 @@ BOOL CRTCDemoDlg::OnInitDialog()
 
 	// TODO: Add extra initialization here
 
+	CString user_name, room_name;
+	GetPrivateProfileString(L"Login", L"user_name", L"", user_name.GetBuffer(20), 20, L"./test.ini");
+	GetPrivateProfileString(L"Login", L"room_name", L"", room_name.GetBuffer(20), 20, L"./test.ini");
+	m_name.SetWindowText(user_name);
+	m_room.SetWindowText(room_name);
+
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
@@ -164,6 +170,11 @@ void CRTCDemoDlg::OnBnClickedLogin()
 	CString user_name, room_name;
 	m_name.GetWindowText(user_name);
 	m_room.GetWindowText(room_name);
+
+	WritePrivateProfileString(L"login", L"user_name", user_name, L"./test.ini");
+	WritePrivateProfileString(L"login", L"room_name", room_name, L"./test.ini");
+	// WriteProfileString(L"login", L"user_name", user_name);
+	// WriteProfileString(L"login", L"room_name", room_name);
 
 	CChatDialog chat_dlg;
 	chat_dlg.Init(user_name, room_name);
