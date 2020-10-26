@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #919191;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container {
+  background-color: white;
+  width: 425px;
+  height: 380px;
+  margin: auto;
+  padding: 45px 55px 0 50px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  font-size: 30px;
+  color: black;
+}
+
+.room-id {
+  height: 35px;
+  margin-top: 55px;
+  border-radius: 2px;
+  font-size: 16px;
+  color: black;
+  padding-left: 20px;
+}
+
+.user-id {
+  height: 40px;
+  margin-top: 25px;
+  border-radius: 2px;
+  font-size: 16px;
+  color: black;
+  padding-left: 20px;
+}
+
+.enter-button {
+  margin-top: 40px;
+  font-size: 18px;
+  height: 50px;
+  background-color: #c8c8c8;
+  border-radius: 2px; /*加上感觉更好看*/
+  color: white;
+}
+
+/* 修改placeholder的颜色 */
+::-webkit-input-placeholder {
+  color: #c1c1c1;
+}
+:-moz-placeholder {
+  color: #c1c1c1;
+}
+::-moz-placeholder {
+  color: #c1c1c1;
+}
+:-ms-input-placeholder {
+  color: #c1c1c1;
+}
