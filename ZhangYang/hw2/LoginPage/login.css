@@ -1,0 +1,65 @@
+#loginFrame{
+    position: absolute;
+    top: 50%;
+    margin-top: -190px;
+    height: 380px;
+    width: 425px;
+    left: 50%;
+    margin-left: -212px;
+    background-color: white;
+    border-radius: 15px;
+}
+.container{
+    width: 320px;
+    top:120px;
+    left:50px;
+    position:absolute;
+}
+#loginTitle {
+    position: absolute;
+    left: 50px;
+    top: 45px;
+    font-size: 30px;
+    color: black;
+}
+#roomIdInput{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    border-radius: 2px;
+    border-color: #c1c1c1;
+    border-style: solid;
+}
+#userIdInput{
+    position: relative;
+    margin-top: 25px;
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    border-radius: 2px;
+    border-color: #c1c1c1;
+    border-style: solid;
+}
+#loginBtn{
+    position: relative;
+    margin-top: 40px;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    border-radius: 2px;
+    background-color: #c8c8c8;
+    font-size: 18px;
+    color: white;
+}
+.infoInput::placeholder{
+    font-size: 16px;
+    color: #c1c1c1;
+}
+.infoInput{
+    font-size: 16px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #919191;
+}

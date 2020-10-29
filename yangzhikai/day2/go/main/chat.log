@@ -1,0 +1,4 @@
+[qSkiptool]2020/10/26 07:36:32 main.go:87: connect success
+
+[qSkiptool]2020/10/26 07:36:32 main.go:90: success: [map[address:111.186.1.77:53956 avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=5684277&spec=100 id:sNYvCogDVC2clFq531fa login_time:2020-10-26T07:36:34.177502454Z name:rtcname0 room_id:roomid type:user] [map[address: avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=1000000&spec=100 id:roomid login_time:2020-10-23T02:16:27.256163327Z name:【群聊】roomid room_id:roomid type:group]]]
+[qSkiptool]2020/10/26 07:36:37 main.go:108: finished

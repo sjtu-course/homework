@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="login.css">
+</head> 
+<body>
+    <div id="loginFrame">
+        <div id="loginTitle">登录</div>
+        <div class="container">
+            <input id="roomIdInput" class="infoInput" placeholder="   房间id">
+            <input id="userIdInput" class="infoInput" placeholder="   用户id">
+            <button id="loginBtn" onclick="login()">进入房间</button>
+        </div>
+    </div>
+    <script>
+        window.setInterval(function(){checkInput()},500);
+        function checkInput() {
+            var roomId=document.getElementById("roomIdInput").value;
+            var userId=document.getElementById("userIdInput").value;
+            var loginBtn=document.getElementById("loginBtn");
+            if(roomId !="" && userId !=""){
+                loginBtn.disabled=false;
+                loginBtn.style.backgroundColor="#5284ed";
+                console.log("有信息")
+
+            }
+            else{
+                loginBtn.disabled=true;
+                loginBtn.style.backgroundColor="#c8c8c8";
+                console.log("无信息")
+                console.log(roomId)
+            }
+        }
+        function login() {
+            var roomId=document.getElementById("roomIdInput").value;
+            var userId=document.getElementById("userIdInput").value;
+            var standardChar="qwertyuiopasdfghjklzxcvbnm1234567890_";
+            for(var i=0;i<userId.length;i++){
+                if(standardChar.indexOf(userId.charAt(i))==-1){
+                    alert("输入字符非法");
+                    return;
+                }
+            }
+            for(var i=0;i<roomId.length;i++){
+                if(standardChar.indexOf(roomId.charAt(i))==-1){
+                    alert("输入字符非法");
+                    return;
+                }
+            }
+            alert("成功");
+        }
+    </script>
+</body>
+</html>
