@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"os"
 	"time"
@@ -31,7 +32,11 @@ type Config struct {
 }
 
 func main() {
-	configFile, err := os.Open("config.json")
+	var confPath string
+	flag.StringVar(&confPath, "config", "config.json", "path to config json file")
+	flag.Parse()
+
+	configFile, err := os.Open(confPath)
 	if err != nil {
 		fmt.Printf("config file error: %s\n", err)
 		return
