@@ -1,13 +1,16 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"os"
 	"time"
 
 	gosocketio "github.com/graarh/golang-socketio"
 	"github.com/graarh/golang-socketio/transport"
 )
 
+// User for login
 type User struct {
 	ID        string    `json:"id"`
 	RoomID    string    `json:"room_id"`
@@ -18,9 +21,30 @@ type User struct {
 	LoginTime time.Time `json:"login_time"`
 }
 
+// Config to use
+type Config struct {
+	IP     string `json:"IP"`
+	Port   int    `json:"Port"`
+	ID     string `json:"ID"`
+	RoomID string `json:"RoomID"`
+	Name   string `json:"Name"`
+}
+
 func main() {
+	configFile, err := os.Open("config.json")
+	if err != nil {
+		fmt.Printf("config file error: %s\n", err)
+		return
+	}
+
+	var conf = &Config{}
+	err = json.NewDecoder(configFile).Decode(conf)
+	if err != nil {
+		fmt.Printf("Failed to decode %s, %s\n", "config.json", err)
+	}
+
 	c, err := gosocketio.Dial(
-		gosocketio.GetUrl("124.236.22.20", 3001, false),
+		gosocketio.GetUrl(conf.IP, conf.Port, false),
 		transport.GetDefaultWebsocketTransport())
 	if err != nil {
 		fmt.Printf("websocket connection error: %v\n", err)
@@ -35,9 +59,9 @@ func main() {
 
 	go func() {
 		err = c.Emit("login", User{
-			ID:        "user",
-			RoomID:    "roomid",
-			Name:      "rtcname0",
+			ID:        conf.ID,
+			RoomID:    conf.RoomID,
+			Name:      conf.Name,
 			AvatarURL: "http://q.qlogo.cn/headimg_dl?dst_uin=5684277&spec=100",
 			Type:      "user",
 		})
@@ -47,6 +71,6 @@ func main() {
 		}
 	}()
 
-	time.Sleep(5*time.Second)
+	time.Sleep(5 * time.Second)
 	fmt.Println("finished")
 }
