@@ -1,0 +1,4 @@
+[Chat]C:/Users/lenovo/Desktop/main.go:63: connect success
+
+[Chat]C:/Users/lenovo/Desktop/main.go:66: success: [map[address:58.247.22.114:1993 avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=5684277&spec=100 id:DP3le7-trxP4Ipfl9irl login_time:2020-10-28T07:49:42.478283362Z name:Rebecca room_id:sjtu type:user] [map[address: avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=1000000&spec=100 id:sjtu login_time:2020-10-25T08:17:34.445674302Z name:【群聊】sjtu room_id:sjtu type:group]]]
+[Chat]C:/Users/lenovo/Desktop/main.go:78: finished
