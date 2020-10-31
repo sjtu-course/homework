@@ -1,0 +1,6 @@
+*.user
+/.vs
+/Debug
+/x64
+/RTCDemo/Debug
+/RTCDemo/x64
