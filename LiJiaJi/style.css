@@ -1,0 +1,106 @@
+body{
+    background-color: #919191;
+    margin:0;
+    padding: 0;
+}
+div.login{
+    width: 325px;
+    height: 270px;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    border: 0px solid #919191;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+input[type=text] {
+    width: 258px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;            
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #c1c1c1;            
+}
+input[type=text]:focus {
+    background-color: lightcyan;
+    color: black;
+}
+input[type=password] {
+    width: 258px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;            
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #c1c1c1;            
+}
+input[type=password]:focus {
+    background-color: lightcyan;
+    color: black;
+}
+.roomid {
+    margin-top: 120px;
+    margin-left: 50px;
+}
+.userid{
+    margin-top: 180px;
+    margin-left: 50px;
+}
+
+input[type=submit] {
+    width: 320px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 255px;
+    margin-left: 50px;
+    background-color: #5286ed;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 1px solid #5286ed;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: nomarl;
+    color: white;
+}
+
+input[disabled] {
+    background-color: #c1c1c1;
+    border: 1px solid #c1c1c1;
+}
