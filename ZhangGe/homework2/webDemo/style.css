@@ -1,0 +1,93 @@
+body {
+  font  : 21px sans-serif;
+
+  padding : 2em;
+  margin  : 0;
+
+  background : #919191;
+}
+
+h1 { 
+  font-size:30px;
+  color:black;
+  position: relative;
+  left : 50px;
+  top  : 45px;
+} 
+
+form {
+  /* 自定义表单位置*/	
+  /*position: relative;
+  left : 20px;
+  top  : 20px;*/
+  
+  /* 居中表单 */
+  margin: 0 auto;
+  
+  /* 表单大小 */
+  width  : 425px;
+  height : 380px;
+  
+  /* 表单轮廓 */
+  border: 0px;
+  border-radius: 15px;
+  
+  background: #FFF
+}
+
+
+input{
+  /* 确保所有文本输入框字体相同 */
+  font: 1em sans-serif;
+  
+  /* 调整文本输入框的边框样式 */
+  border: 1px solid #999;
+  border-radius: 5px;
+  
+  /*margin-top: 40px;*/
+  /*margin-left: 50px;*/
+}
+
+#room{
+  position: relative;
+  left : 50px;
+  top  : 45px;
+  
+  width: 320px;
+  height: 35px;
+}
+
+#user{
+  position: relative;
+  left : 50px;
+  top  : 60px;
+  
+  width: 320px;
+  height: 40px;
+}
+
+button{
+  width: 320px;
+  height: 40px;
+  
+  position: relative;
+  left : 50px;
+  top  : 80px;
+  
+  border: 0px;
+  background: #c8c8c8;
+  border-radius: 5px;
+}
+
+input_font{
+	font-size: 16px;
+	color:white
+}
+
+button_font{
+	font-size: 16px;
+	color:white
+}
+
+
+
