@@ -1,0 +1,4 @@
+[Chat]/Users/middaywords/Documents/courses/2020/bytedance_webrtc/ppt/day2-1/linux/demo/main.go:64: connect success
+
+[Chat]/Users/middaywords/Documents/courses/2020/bytedance_webrtc/ppt/day2-1/linux/demo/main.go:67: success: [map[address:58.247.22.106:5249 avatarUrl: id:XgwkYRHr690WGxABeXpe login_time:2020-10-30T09:54:10.730675164Z name: room_id: type:user] [map[address: avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=1000000&spec=100 id: login_time:2020-10-25T08:10:32.1493854Z name:【群聊】 room_id: type:group] map[address:58.247.22.121:27074 avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=5684277&spec=100 id:06b7ZU6lQjaYplIcm8nf login_time:2020-10-26T06:09:05.361256335Z name:XingruiYi room_id: type:user]]]
+[Chat]/Users/middaywords/Documents/courses/2020/bytedance_webrtc/ppt/day2-1/linux/demo/main.go:83: finished

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-CN"> 
+<head>
+    <meta charset="utf-8" />
+
+    <script>
+        function IsNull() {
+            var room = document.getElementById("RoomID").value;
+            var user = document.getElementById("UserID").value;
+            if(room == null || room == "undefined" || room == "" || user == null || user == "undefined" || user == ""){
+                document.getElementById("ButtonID").disabled = "true";
+            }
+            else document.getElementById("ButtonID").disabled = "";
+        }
+
+        function IsValid(){
+            var x = document.getElementById("RoomID").value;
+            var y = document.getElementById("UserID").value;
+            var reg = /^[0-9a-zA-Z_]{1,}$/;
+            if(reg.test(x) && reg.test(y)) alert("成功");
+            else alert("失败(只能输入字母,数字和下划线)");
+            
+        }
+        
+    </script>
+
+    <title></title>
+    <style>
+        body {
+            background-color: #919191;
+        }
+
+        div {
+            border-radius: 15px;
+            background: #FFFFFF;
+            width: 425px;
+            height: 380px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        CNlogin {
+            position: relative;
+            font-size: 30px;
+            font-weight: 600;
+            color: black;
+            left: 50px;
+            top: 45px;
+        }
+
+        input[type=text1] {
+            border-radius: 2px;
+            width: 260px;
+            height: 35px;
+            position: absolute;
+            top: 120px;
+            left: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-style: solid;
+            border-color: #c1c1c1;
+            border-width: 1.5px;
+        }
+
+        input[type=text2] {
+            border-radius: 2px;
+            width: 260px;
+            height: 35px;
+            position: absolute;
+            top: 180px;
+            left: 50px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-style: solid;
+            border-color: #c1c1c1;
+            border-width: 1.5px;
+        }
+
+        input[type=text1]:focus {
+            outline-color: #158be9;
+            outline-width: 1.5px;
+        }
+
+        input[type=text2]:focus {
+            outline-color: #158be9;
+            outline-width: 1.5px;
+        }
+
+        Entry {
+            border-radius: 2px;
+            background: #c8c8c8;
+            width: 320px;
+            height: 35px;
+            position: absolute;
+            top: 265px;
+            left: 50px;
+            border-style: solid;
+            border-color: #c1c1c1;
+            border-width: 2px;
+            text-align: center;
+        }
+
+        input::placeholder {
+            width: 100%;
+            font-size: 16px;
+            color: #c1c1c1;
+            position: relative;
+        }
+
+        .btn {
+            border-radius: 2px;
+            width: 320px;
+            height: 35px;
+            position: absolute;
+            background-color: #5286ed;
+            border-width: 0px;
+            color: white;
+            top: 265px;
+            left: 50px;
+            text-align: center;
+            font-size: 18px;
+            line-height: normal;
+        }
+
+        button[disabled] {
+            background-color: #c8c8c8;
+            border-style: solid;
+            border-width: 0px;
+        }
+    </style>
+
+    <!--
+           line-height设置了行间的距离（行高），将要居中的元素的line-heigth值设置为和其块级父元素的height值一样时，其内部内容会垂直居中。 -->
+</head>
+<body>
+    
+
+    <div>
+        <CNlogin>登录</CNlogin>
+        <form>
+            <input type="text1" id="RoomID" placeholder="房间ID" required="required" oninput="IsNull()">
+            
+        </form>
+        <form>
+            <input type="text2" id="UserID" placeholder="用户ID" required="required" oninput="IsNull()">
+        </form>
+        <button type="button" class="btn" id ="ButtonID" onclick="IsValid()" disabled>进入房间</button>
+    </div>
+</body>
+</html>
