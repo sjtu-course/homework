@@ -19,7 +19,7 @@ encode_channel = 1;
 
 ```c++
 opus_encoder_ctl(opus_encoder_handle, OPUS_SET_COMPLEXITY(0)); // 设置复杂度0
-opus_encoder_ctl(opus_encoder_handle, OPUS_SET_COMPLEXITY(0)); // 设置复杂度为10
+opus_encoder_ctl(opus_encoder_handle, OPUS_SET_COMPLEXITY(10)); // 设置复杂度为10
 ```
 
 通过测试我们可以获取到对应的运行时间：
