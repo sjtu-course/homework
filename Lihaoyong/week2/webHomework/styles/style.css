@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #919191;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.box {
+
+    position: absolute;
+	left: 50%;
+	top: 50%;
+    transform: translate(-50%,-50%);
+    
+
+    background-color: white;
+    width: 425px;
+    height: 380px;
+    
+    border-radius: 15px;
+    
+}
+
+.title {
+    font-size: 30px;
+    color: black;
+    margin-top: 45px;
+    margin-left: 50px
+}
+
+.roomID {
+    position: absolute;
+    height: 35px;
+    width: 287px;
+    top: 120px;
+    left: 50px;
+    font-size: 16px;
+    
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    padding-left: 30px;
+    outline: 0;
+}
+
+.userID {
+    position: absolute;
+    height: 35px;
+    width: 287px;
+    top: 180px;
+    left: 50px;
+    font-size: 16px;
+    
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    padding-left: 30px;
+}
+
+.enter {
+    position: absolute;
+    height: 35px;
+    width: 320px;
+    top: 255px;
+    left: 50px;
+    font-size: 18px;
+    color: white;
+    background-color: #c8c8c8;
+    border-width: 0px;
+    border-radius: 2px;
+
+}
+
+.success {
+    background-color: #5286ed;
+}
