@@ -1,1 +1,1 @@
-Mix two video and try to improment the video quality
+Mix two videos and try to improve the video quality
