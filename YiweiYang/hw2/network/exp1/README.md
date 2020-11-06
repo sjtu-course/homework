@@ -71,7 +71,7 @@
 	#生存时间：表示数据包在网络中的寿命，缩写TTL，功能是“跳数限制”
     Time to live: 46
     Protocol: UDP (17) #指出此数据包携带数度的协议为UDP
-	#首部效验和：数据包每经过一个路由器，路由器都要重新计算一下首部检验和，这里并核实。
+	#首部效验和：数据包每经过一个路由器，路由器都要重新计算一下首部检验和，这里未核实。
 	#若首部未发生变化，则此结果必为0，于是就保留这个数据报。这个字段只检验数据报的首部，但不包括数据部分。
     Header checksum: 0x5385 [validation disabled]
     [Header checksum status: Unverified]
@@ -87,7 +87,7 @@
     Source Port: 8000
     Destination Port: 4020
     Length: 343 #数据报文长度:343字节
-    Checksum: 0xe2b0 [unverified] #校验和，并核实
+    Checksum: 0xe2b0 [unverified] #校验和，未核实
     [Checksum Status: Unverified]
     [Stream index: 0]
 	#此包与第一包和前一包的时间戳间隔
