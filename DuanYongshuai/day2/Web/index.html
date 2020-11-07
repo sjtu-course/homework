@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+    	body{
+    		background-color:#919191;
+    	}
+        #login_box{
+        	background-color:#FFFFFF;
+            border-radius:15px;
+    		border:2px solid #FFFFFF;
+    		padding:0px;
+    		width:425px;
+    		height:380px;
+            margin:auto;
+			position:absolute;
+    		top:0;
+			left:0;
+			right:0;
+			bottom:0;
+        }
+        #login_head{
+        	font-size:30px;
+        	color:black;
+        	margin-top:45px;
+        	margin-left:50px;
+        }
+  		#input_box1{
+        	margin-top:45px;
+        	margin-left:50px;
+
+  		  	height:35px;
+  		  	width:320px;
+  		}
+  		#input_text1{
+            border-radius:2px;
+    		border:1px solid #C8C8C8;
+    		padding-left:19px;
+    		padding-right:19px;
+
+  		  	height:35px;
+  		  	width:280px;
+
+        	font-size:16px;
+        	color:black;
+  		}
+  		#input_text1::-webkit-input-placeholder{
+        	font-size:16px;
+        	color:#c1c1c1;
+    	}
+  		#input_box2{
+        	margin-top:25px;
+        	margin-left:50px;
+
+  		  	height:40px;
+  		  	width:320px;
+  		}
+  		#input_text2{
+            border-radius:2px;
+    		border:1px solid #C8C8C8;
+    		padding-left:19px;
+    		padding-right:19px;
+
+  		  	height:40px;
+  		  	width:280px;
+
+        	font-size:16px;
+        	color:black;
+  		}
+  		#input_text2::-webkit-input-placeholder{
+        	font-size:16px;
+        	color:#c1c1c1;
+    	}
+  		#input_box3{
+  		  	margin-top:40px;
+        	margin-left:50px;
+
+  		  	height:40px;
+  		  	width:320px;
+  		}
+  		#input_submit{
+  		  	text-align:center;
+        	font-size:18px;
+        	color:white;
+  		  	background-color:#C8C8C8;
+
+            border-radius:2px;
+    		border:0px solid #C8C8C8;
+
+  		  	height:40px;
+  		  	width:320px;
+  		}
+    </style>
+  </head>
+  <body>
+    <div id="login_box">
+      <div id="login_head">登录</div>
+      <form method="get" onsubmit="checkForm()">
+  	  	<div id="input_box1"><input id="input_text1" type="text" name="rname" required="required" placeholder="房间ID" oninput="input1Listener()"/></div>
+  	  	<div id="input_box2"><input id="input_text2" type="text" name="uname" required="required" placeholder="用户ID" oninput="input2Listener()"/></div>
+  	  	<div id="input_box3"><input id="input_submit" type="submit" value="进入房间" disabled="false" /></div>
+	  </form>
+    </div>
+    <script type="text/javascript">
+    	var input1IsEmpty=true;
+    	var input2IsEmpty=true;
+
+    	function setSubmitButton(){
+    		var login_btn=document.getElementById("input_submit");
+    		if (input1IsEmpty||input2IsEmpty) {
+    			login_btn.style.backgroundColor="#C8C8C8";
+    			login_btn.disabled=true;
+    		} else {
+    			login_btn.style.backgroundColor="#5286ED";
+    			login_btn.disabled=false;
+    		}
+    	}
+
+		function input1Listener(){
+			var roomId=document.getElementById("input_text1").value;
+			if (roomId=="") input1IsEmpty=true;
+			else input1IsEmpty=false;
+			setSubmitButton();
+		}
+
+		function input2Listener(){
+    		var userId=document.getElementById("input_text2").value;
+			if (userId=="") input2IsEmpty=true;
+			else input2IsEmpty=false;
+			setSubmitButton();
+		}
+    </script>
+    <script type="text/javascript">
+    	function isLegal(str){
+    		var pattern=/^[a-zA-Z0-9_]*$/;
+   			return pattern.test(str);
+    	}
+
+    	function checkForm(){
+    		var roomId=document.getElementById("input_text1").value;
+			var userId=document.getElementById("input_text2").value;
+
+			if (isLegal(roomId)&&isLegal(userId)) alert("成功");
+			else alert("失败");
+
+			return false;
+    	}
+    </script>
+  </body>
+</html>
