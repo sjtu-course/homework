@@ -1,0 +1,72 @@
+
+<html>
+<head>
+    <title>登录</title>
+</head>
+<style>
+    body{
+        background-color: #919191;
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+    <style> 
+        div {
+          width: 425px;
+          height: 380px;
+          border-radius: 30px;
+          background:white;
+          padding-top:45px;
+          margin:0 auto;
+          position:relative;
+          top:50%;
+          transform: translateY(-50%);
+        }
+        h1{
+            margin-left:50px;
+            border:0;
+            margin-top:0%;
+            margin-bottom: 0;
+        }
+        input[name="room"] {
+            font-size: 16px;
+            color:#c1c1c1;
+            margin-top:45px;
+            margin-left:50px;
+        }
+        input[name="user"]{
+            font-size: 16px;
+            color:#c1c1c1;
+            margin-top:25px;
+            margin-left:50px;
+        }
+        input[type="button"]{
+            font-size: 18px;
+            color:white;
+            margin-top:40px;
+            margin-left:50px;
+            
+        }
+        </style>
+<div id="login_frame" >
+     <h1 style="font-size:30px;color:black" >登录</h1>
+        <input name="room" type="text" style="width:320px;height: 40px;border-radius: 2px;border:1px solid" placeholder="房间ID" >
+        <input name="user" type="text" style="width:320px;height: 40px;border-radius: 2px;border:1px solid" placeholder="用户ID" >
+        <script>
+            {
+        function changecolor(obj,color)  
+        {   
+            var mychar = document.getElementById("id");    
+            mychar.style.background="#c8c8c8"
+        }
+        function display_alert()
+        {
+            alert("Succeed!")
+        }
+            }
+        </script>
+        <input id="id" type="button" value="进入房间" style="width: 320px;height: 40px;border-radius: 2px;border:1px;background: #5286ed;" onclick="changecolor();display_alert();javascript:{this.disabled=true;document.form1.submit();}">
+
+   </div>
+</body>
+</html>

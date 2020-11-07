@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        div{
+            width: 425px;
+            height: 380px;
+            background: white;
+            padding-top: 45px;
+            padding-left: 50px;
+            font-size:30px;
+            color:black;
+            position: absolute;
+            border-radius: 15px;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: inline-block;
+        }
+        input::-webkit-input-placeholder {
+            color: #c1c1c1;
+            font-size:16px;
+            padding-left: 20px;
+        }
+        body{background: #919191;}；
+
+    </style>
+</head>
+<body>
+
+<div>
+    登录
+    <input id="roomID" type="text" placeholder="房间ID"
+           style="
+           width: 320px;
+           height: 35px;
+           position: absolute;
+           top: 120px;
+           left: 50px;
+           font-size: 20px;
+           border-radius: 2px;"
+           onkeyup="roomIDdownTrigger()"
+
+    >
+    <input id="userID" type="text" placeholder="用户ID"
+           style="
+           width: 320px;
+           height: 40px;
+           position: absolute;
+           top: 180px;
+           left: 50px;
+           font-size: 20px;
+           border-radius: 2px;"
+           onkeyup="userIDdownTrigger()"
+    >
+    <div1
+            id = "click"
+            style="
+            width:320px;
+            height:50px;
+            position: absolute;
+            background:#c8c8c8;
+            top:260px;
+            left:50px;
+            border-radius:2px;
+            font-size:18px;
+            color:white;"
+          onclick="clickTrigger()"
+    >
+        <p align="center">进入房间</p>
+    </div1>
+
+</div>
+
+<script>
+    var clickflag;
+    clickflag = false;
+    function roomIDdownTrigger(){
+        var roomID, userID;
+        roomID = document.getElementById('roomID').value;
+        userID = document.getElementById('userID').value;
+        if (roomID !== '' &&  userID !== ''){
+            document.getElementById('click').style.background= "#5286ed";
+            clickflag = true;
+        }
+        else{
+            document.getElementById('click').style.background= "#c8c8c8";
+            clickflag = false;
+        }
+    }
+    function userIDdownTrigger(){
+        var roomID, userID;
+        roomID = document.getElementById('roomID').value;
+        userID = document.getElementById('userID').value;
+        if (roomID !== '' &&  userID !== ''){
+            document.getElementById('click').style.background= "#5286ed";
+            clickflag = true;
+        }
+        else{
+            document.getElementById('click').style.background= "#c8c8c8";
+            clickflag = false;
+        }
+    }
+    function clickTrigger(){
+        if(clickflag){
+            var roomID, userID;
+            roomID = document.getElementById('roomID').value;
+            userID = document.getElementById('userID').value;
+            if (isValid(roomID) && isValid(userID)){
+                alert("成功！");
+            }
+            else{
+                alert("失败！");
+            }
+        }
+    }
+    function isValid(str) {
+        return /^\w+$/.test(str);
+    }
+
+</script>
+
+</body>
+</html>
