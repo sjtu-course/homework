@@ -8,11 +8,11 @@
 
 - `code/video/output.mp4`为直接使用ffmpeg混合两个输入得到的视频。可以看出视频内容为从8开始的倒计时，但不是很清楚。
 
-[![BINibq.gif](https://s1.ax1x.com/2020/11/07/BINibq.gif)](https://imgchr.com/i/BINibq)
+[![BINibq.gif](https://s1.ax1x.com/2020/11/07/BINibq.gif)](https://github.com/sjtu-course/homework/blob/main/YiweiYang/hw3/video/code/video/output1.mp4)
 
 - 首先观察到直接合成的视频对比度很低，先使用ffmpeg提高了对比度得到`code/video/output2.mp4`
 
-[![BIN8IK.gif](https://s1.ax1x.com/2020/11/07/BIN8IK.gif)](https://imgchr.com/i/BIN8IK)
+[![BIN8IK.gif](https://s1.ax1x.com/2020/11/07/BIN8IK.gif)](https://github.com/sjtu-course/homework/blob/main/YiweiYang/hw3/video/code/video/output2.mp4)
 
 - 然后注意到视频中的噪点非常多，使用中值滤波和非局部平均去噪进行降噪，得到`code/video/output3.mp4`。
 	- 该步骤非常耗时
@@ -20,15 +20,15 @@
 
 > 也可以使用ffmpeg带的[BM3D算法](https://zhuanlan.zhihu.com/p/92973703)
 
-[![BINJPO.gif](https://s1.ax1x.com/2020/11/07/BINJPO.gif)](https://imgchr.com/i/BINJPO)
+[![BINJPO.gif](https://s1.ax1x.com/2020/11/07/BINJPO.gif)](https://github.com/sjtu-course/homework/blob/main/YiweiYang/hw3/video/code/video/output3.mp4)
 
 - 视频经过滤波后，画面变得比较模糊，我希望通过锐化的方式让数字边缘看起来更清楚一些，得到`code/video/output4.mp4`
 
-[![BINNxH.gif](https://s1.ax1x.com/2020/11/07/BINNxH.gif)](https://imgchr.com/i/BINNxH)
+[![BINNxH.gif](https://s1.ax1x.com/2020/11/07/BINNxH.gif)](https://github.com/sjtu-course/homework/blob/main/YiweiYang/hw3/video/code/video/output4.mp4)
 
 - 锐化后噪点也看的更清楚了，使用中值滤波再处理一次，得到`code/video/output5.mp4`。由于最开始的噪声太强，如果不使用形状特征匹配，基本也就是这个效果了。
 
-[![BINtRe.gif](https://s1.ax1x.com/2020/11/07/BINtRe.gif)](https://imgchr.com/i/BINtRe)
+[![BINtRe.gif](https://s1.ax1x.com/2020/11/07/BINtRe.gif)](https://github.com/sjtu-course/homework/blob/main/YiweiYang/hw3/video/code/video/output5.mp4)
 
 **注意：** opencv保存的mp4文件需要跟原视频一样使用avci编码才可以，然而需要额外下载openh264.dll文件放在目录中，直接使用的话会报错
 
