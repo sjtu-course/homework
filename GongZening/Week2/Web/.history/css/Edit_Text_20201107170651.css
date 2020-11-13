@@ -1,0 +1,10 @@
+@charset "utf-8";
+.edit_text{
+    position: absolute;;
+    width: 320px;
+    height: 35px;
+    margin-left: 50px;
+    border-radius: 2px;
+    border:1px solid #c1c1c1;
+    font-size: 16px;
+}

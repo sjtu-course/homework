@@ -9,3 +9,8 @@
 - 垂直居中
 - 有输入时按钮变色
 - 提交时校验输入是否是下划线和数字
+
+### homework-3
+
+使用命令 ffmpeg -i video_1.mp4 -i video_2.mp4 -filter_complex mix output.mp4合成视频output.mp4，可以看到是个倒计时视频
+

@@ -1,0 +1,16 @@
+/* #round_rect */
+@charset "utf-8";
+div{
+	width: 425px;
+	height: 380px;
+	background-color: white;
+	border-radius: 15px;
+	position: absolute;
+        left: 50%;
+	top:50%;
+	margin-left: -75px;/*子div宽度的一半*/
+	margin-top: -75px; /*子div高度的一半*/
+
+	/* margin: auto;
+	margin-top:5%; */
+}

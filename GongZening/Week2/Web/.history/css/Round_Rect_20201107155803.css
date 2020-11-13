@@ -1,0 +1,9 @@
+/* #round_rect */
+@charset "utf-8";
+div{
+	width: 425px;
+	height: 380px;
+	background-color: white;
+	display: inline-block;
+	vertical-align: middle;
+}

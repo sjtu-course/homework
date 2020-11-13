@@ -1,0 +1,4 @@
+[ChatLog] d:/master/bytedance/test/main.go:64: connect success
+
+[ChatLog] d:/master/bytedance/test/main.go:68: success: [map[address:58.247.22.142:54856 avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=5684277&spec=100 id:vY3MJPrewG4D4Vl-iJFO login_time:2020-10-31T14:05:54.60284578Z name:ShuYuanhe room_id:ByteDance type:user] [map[address: avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=1000000&spec=100 id:ByteDance login_time:2020-10-31T14:01:36.949386941Z name:【群聊】ByteDance room_id:ByteDance type:group]]]
+[ChatLog] d:/master/bytedance/test/main.go:81: finished

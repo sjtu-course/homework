@@ -1,0 +1,18 @@
+@charset "utf-8";
+body,p,h1,h2,h3,h4,h5,h6,dl,dd{
+    margin:0;
+    font-size:12px;
+/* font-family:XX; */
+}
+ol,ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration:none;
+}
+img{
+    border:none;
+}
+/* 默认样式重置 (css reset)  */

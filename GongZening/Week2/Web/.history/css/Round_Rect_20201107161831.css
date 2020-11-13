@@ -1,0 +1,16 @@
+@charset "utf-8";
+div{
+	width: 425px;
+	height: 380px;
+	background-color: white;
+	/* 圆角大小 */
+	border-radius: 15px;
+	/* 位置居中 */
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+}
