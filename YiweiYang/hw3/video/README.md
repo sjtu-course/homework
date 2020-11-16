@@ -8,7 +8,7 @@
 
 - `code/video/output.mp4`为直接使用ffmpeg混合两个输入得到的视频。可以看出视频内容为从8开始的倒计时，但不是很清楚。
 
-
+![BINibq.gif](https://img2020.cnblogs.com/blog/1507333/202011/1507333-20201117063806688-1380941637.gif)
 [![BINibq.gif](https://img2020.cnblogs.com/blog/1507333/202011/1507333-20201117063806688-1380941637.gif)](https://github.com/sjtu-course/homework/blob/main/YiweiYang/hw3/video/code/video/output.mp4)
 
 - 首先观察到直接合成的视频对比度很低，先使用ffmpeg提高了对比度得到`code/video/output2.mp4`
