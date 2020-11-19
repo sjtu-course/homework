@@ -1,0 +1,11 @@
+2020/11/19 17:26:05 Successfully opened config.json
+2020/11/19 17:26:05 IP: 124.236.22.20
+2020/11/19 17:26:05 Port: 3001
+2020/11/19 17:26:05 ID: 111111
+2020/11/19 17:26:05 Room_ID: test
+2020/11/19 17:26:05 Name: chenqi
+2020/11/19 17:26:05 connect success
+
+
+2020/11/19 17:26:05 success: [map[address:183.192.10.52:6460 avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=5684277&spec=100 id:Ov5Xxuay1HCRbBP1IAde login_time:2020-11-19T09:26:05.849915771Z name:rtcname0 room_id:roomid type:user] [map[address: avatarUrl:http://q.qlogo.cn/headimg_dl?dst_uin=1000000&spec=100 id:roomid login_time:2020-10-23T02:16:27.256163327Z name:【群聊】roomid room_id:roomid type:group]]]
+2020/11/19 17:26:10 finished
