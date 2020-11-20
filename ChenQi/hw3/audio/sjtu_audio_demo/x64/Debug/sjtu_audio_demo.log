@@ -1,0 +1,3 @@
+﻿  sju_audio_demo.cpp
+C:\Users\12105\Desktop\ppt\day3-2\sjtu-audio-demo\sjtu_audio_demo\sju_audio_demo.cpp(71,87): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  sjtu_audio_demo.vcxproj -> C:\Users\12105\Desktop\ppt\day3-2\sjtu-audio-demo\sjtu_audio_demo\x64\Debug\sjtu_audio_demo.exe
